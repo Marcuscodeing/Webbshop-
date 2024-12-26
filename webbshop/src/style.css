@@ -13,6 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#section1 {
+  display: flex;
+}
+
+.video1 {
+  width: 650px;
+}
+
+.img1 {
+  width: 650px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
