@@ -14,6 +14,7 @@ async function getCloths (): Promise<Product[]> {
 
   try {
     const response = await fetch ("https://api.escuelajs.co/api/v1/categories/1/products");
+    
     if (!response.ok) {
       throw new Error ("Not ok");
     }
@@ -37,6 +38,7 @@ async function clothProducts () {
 
 products.forEach ((product) => {
   
+  console.log(product.image);
   const productArea = document.createElement("div");
 
   const img = document.createElement("img");
@@ -68,7 +70,5 @@ products.forEach ((product) => {
 
 
 clothProducts ();
-
-
 
 
