@@ -1,11 +1,11 @@
 import './style.css'
 
+
 interface Product {
   id: number;
   title: string 
   price: number;
-  description: string;
-  image: string 
+  image: string; 
   category: string;
 }
 
@@ -13,11 +13,12 @@ interface Product {
 async function getCloths (): Promise<Product[]> {
 
   try {
-    const response = await fetch ("https://api.escuelajs.co/api/v1/categories/1/products");
+    const response = await fetch ("https://fakestoreapi.com/products?category=men's clothing&category=women's clothing");
     
     if (!response.ok) {
       throw new Error ("Not ok");
     }
+
     const clothsData: Product[] = await response.json();
     console.log(clothsData);
     return clothsData;
@@ -36,10 +37,15 @@ async function clothProducts () {
 
   const products = await getCloths();
 
-products.forEach ((product) => {
+  const filteredProducts = products.filter(product => 
+    product.category === "men's clothing" || product.category === "women's clothing"
+  );
+
+
+filteredProducts.forEach ((product) => {
   
-  console.log(product.image);
   const productArea = document.createElement("div");
+  productArea.className = "product-area";
 
   const img = document.createElement("img");
   img.src = product.image;
@@ -48,21 +54,16 @@ products.forEach ((product) => {
   const title = document.createElement("h3");
   title.textContent = product.title;
   
-  const description = document.createElement("p");
-  description.textContent = product.description;
-  
   const price = document.createElement("p");
-  price.textContent = "$" + product.price;
+  price.textContent = "$" + product.price.toFixed(2);
 
   const button = document.createElement("button");
   button.textContent = "Add to cart";
   
   productArea.appendChild(img);
   productArea.appendChild(title);
-  productArea.appendChild(description);
   productArea.appendChild(price);
   productArea.appendChild(button);
-
   productsContainer.appendChild(productArea);
 
 });
