@@ -14,6 +14,6 @@ if (container) {
 for (let i = 0; i < brandPictures.length; i++) {
     const images = document.createElement("img");
     images.src = brandPictures[i];
-    container.appendChild(img); 
+    container.appendChild(images); 
 }
 }
