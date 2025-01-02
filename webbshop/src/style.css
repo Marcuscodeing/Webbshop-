@@ -63,7 +63,7 @@ body {
 nav,
 .nav-link {
   list-style-type: none;
-  background-color: black;
+  background-color: rgb(155, 148, 148);
   width: 100%;
   margin-top: 0;
   padding: 0;
@@ -117,6 +117,7 @@ li {
 #section1 {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .video1 {
@@ -131,26 +132,26 @@ li {
 /* Här börjar nyheter, sida3 */
 
 .nyheter-h1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #product-container {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
-  gap: 25px;
+  gap: 15px;
   max-height: 700px;
-  max-width: 1800px;
+  max-width: 12000px;
   margin-top: 50px;
 }
 
 .product-area {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   border: 1px solid slategray;
   padding: 10px;
   text-align: center;
-  min-width: 200px;
+  max-width: 200px;
   height: 100%;
 }
 
@@ -167,11 +168,61 @@ li {
 
 /* Här slutar nyheter, sida3 */
 
+/* Här börjar Produkter för kvinnor */
+
+.theDiv {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.popular-h2-dam {
+  margin-top: 100px;
+}
+
+.products-dam {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  text-align: center;
+  height: 200px;
+}
+
+.products-dam img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Här börjar Produkter för Män */
+
+.popular-h2 {
+  margin-top: 100px;
+}
+
+.products-herr img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.products-herr {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  text-align: center;
+  max-width: 200px;
+  height: 100px;
+}
+/* Här Slutar Produkter för kvinnor / Herr */
+
 /* Här börjar brands, sida4 */
 
-.brands-h2 {
+.h2-brands {
+  margin-top: 300px;
   margin-left: 100px;
-  margin-top: 100px;
 }
 
 .brand-images {
@@ -186,7 +237,7 @@ li {
   justify-content: center;
   align-items: center;
   margin-left: 100px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 /* Här slutar brands, sida4 */
@@ -226,6 +277,7 @@ li {
 
 .loggin-items p {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 /* Här börjar förmåner */
@@ -236,18 +288,24 @@ li {
 
 .loggin-formoner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  width: 1400px;
 }
 
 .loggin-formoner div {
   display: grid;
-  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
   height: 250px;
-  max-width: 400px;
-  margin-left: 150px;
+  width: 600px;
+  gap: 20px;
+}
+
+.loggin-formoner p {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .trustpilot {
@@ -273,13 +331,13 @@ li {
   padding: 20px;
 }
 
-.form-h3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .footer-form {
   text-align: center;
+}
+
+.footer-form h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .ikon-h4 {
@@ -318,7 +376,7 @@ li {
 }
 
 .footer-items li {
-  font-size: 15px;
+  font-size: 18px;
   width: 150px;
   text-align: center;
 }
