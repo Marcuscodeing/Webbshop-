@@ -369,3 +369,15 @@ button:focus-visible {
   margin-left: 100px;
 
 }
+
+.products-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+  gap: 10px;
+}
+
+.products-container img {
+  width: 300px;
+  height: 400px;
+}
