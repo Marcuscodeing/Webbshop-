@@ -9,9 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/style.css">
   </head>
 
   <body>
+    <div id="app">
     <nav>
       <div class="nav-link">
       <ul >
@@ -47,7 +49,9 @@
       </div>
     </section>
   </div>
-    <div id="app">
+
+  <!-- Sidan med video och bild börjar här-->
+    
       <section id="section1">
         <video class="video1" src="video/model.mp4" autoplay muted loop></video>
         <img
@@ -56,7 +60,25 @@
           alt="Bild på modellen"
         />
       </section>
-    <div id="app">
+
+<!-- Nyheter börjar här -->
+
+      <h1 class="nyheter-h1">Nyheter</h1>
+      <div id="product-container"></div>
+    </div>
+
+<!-- Nyheter slutar här -->
+
+<!-- Brands börjar här -->
+
+<div id="brand-section">
+  <h2 class="h2-brands">Utvalda kollektioner</h2>
+</div>
+
+<!-- Brands slutar här -->
+
+
+<!-- Logga in börjar här -->
       <section class="loggin-section">
         <div>
           <img class="loggin-img" src="Img/Loggin.jpg" alt="Happy customers" />
@@ -119,9 +141,13 @@
 </section>
 
     </div>
-    <div id="app">
+
+    <!-- Logga in slutar här -->
+    
+    <!-- Footer börjar här -->
+    
     <footer>
-      <div id="app">
+     
         <hr />
         <section class="sektion1">
           <form class="form">
@@ -156,7 +182,7 @@
             </ul>
           </div>
           <div>
-            <h3>Populära kategorier herr</h3>
+            <h3> Kategori herr</h3>
             <ul>
               <li>Vinterjackor</li>
               <li>T-shirt</li>
@@ -166,7 +192,7 @@
             </ul>
           </div>
           <div>
-            <h3>Populära kategorier dam</h3>
+            <h3>Kategori dam</h3>
             <ul>
               <li>Vinterjackor</li>
               <li>Skor</li>
@@ -220,10 +246,8 @@
         <p><i class="fa-regular fa-copyright"></i> 2025 Shopify.com</p>
       </section>
     </footer>
-    <div id="app">
-      <h1>Nyheter</h1>
-      <div id="product-container"></div>
-    </div>
+
+    <!-- Footer slutar här -->
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
