@@ -13,19 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-  /* Light Mode */
-  @media (prefers-color-scheme: light) {
-    :root {
-      color: #213547;
-      background-color: #ffffff;
-    }
-  
-    a:hover {
-      color: #2b2e66;
-    }
-  }
-
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +26,6 @@ body {
   height: 100vh;
   flex-direction: column;
 }
-
 
 /* Här börjar Första sidan */
 /* Slider styles */
@@ -125,9 +111,8 @@ li {
   margin-right: 50px;
 }
 
-
-/* Här slutar Första sidan */ 
-/* Här börjar video och bild sektionen, sida2 */ 
+/* Här slutar Första sidan */
+/* Här börjar video och bild sektionen, sida2 */
 
 #section1 {
   display: flex;
@@ -142,11 +127,8 @@ li {
   width: 650px;
 }
 
-
-
-/* Här slutar video och bild sektionen, sida2 */ 
-/* Här börjar nyheter, sida3 */ 
-
+/* Här slutar video och bild sektionen, sida2 */
+/* Här börjar nyheter, sida3 */
 
 .nyheter-h1 {
   margin-top: 50px;
@@ -183,9 +165,9 @@ li {
   overflow: hidden;
 }
 
-/* Här slutar nyheter, sida3 */ 
+/* Här slutar nyheter, sida3 */
 
-/* Här börjar brands, sida4 */ 
+/* Här börjar brands, sida4 */
 
 .brand-images {
   background-color: #b9bbe5;
@@ -202,18 +184,19 @@ li {
   margin-top: 85px;
 }
 
-/* Här slutar brands, sida4 */ 
+/* Här slutar brands, sida4 */
 
+/* Här börjar logga in / skapa konto */
 
-
-
-
-
-/* Här börjar logga in / skapa konto */ 
-
+.loggin-h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 .loggin-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   margin-top: 100px;
 }
@@ -222,19 +205,6 @@ li {
   max-width: 600px;
   max-height: 600px;
 }
-
-.loggin-items {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 20px;
-  padding: 20px;
-}
-
-.loggin-items p {
-  margin-bottom: 50px;
-}
-
 .loggin-items button {
   margin-bottom: 20px;
 }
@@ -245,23 +215,34 @@ li {
   height: 30px;
 }
 
+.loggin-items {
+  text-align: center;
+}
+
+.loggin-items p {
+  margin-bottom: 50px;
+}
+
+/* Här börjar förmåner */
+
 .loggin-h1 {
   margin-top: 100px;
 }
 
+.loggin-formoner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .loggin-formoner div {
   width: 300px;
   height: 250px;
 }
 
-.loggin-items a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
 .trustpilot {
+  display: flex;
+  justify-content: center;
   margin-top: 30px;
 }
 
@@ -270,8 +251,26 @@ li {
   max-height: 150px;
 }
 
-/* Här slutar logga in / skapa konto */ 
-/* Här börjar Footer */ 
+/* Här slutar logga in / skapa konto */
+/* Här börjar Footer */
+
+.footer-section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.footer-form {
+  text-align: center;
+}
+
+.ikon-h4 {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
 .ikon-container {
   display: flex;
@@ -287,7 +286,14 @@ li {
 .footer-items {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 70px;
+}
+
+.footer-items h3 {
+  display: flex;
+  justify-content: center;
+  margin: 35px;
 }
 
 .footer-items ul {
@@ -296,10 +302,16 @@ li {
   margin: 20px;
 }
 
-.footer-items h3 {
-  display: flex;
-  justify-content: center;
-  margin: 35px;
+.footer-items li {
+  font-size: 20px;
+  width: 150px;
+  text-align: center;
+}
+
+.footer-h3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .social-media {
@@ -316,25 +328,25 @@ li {
   background-color: rgb(183, 180, 176);
   background-size: cover;
   height: 200px;
+  margin-top: 30px;
 }
 
+/* Här slutar footer */
 
-/* Här slutar footer */ 
-
-
-
+.loggin-items a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
 
 h4 {
   margin-top: 50px;
 }
 
-
-
 a {
   color: white;
   text-decoration: none;
 }
-
 
 button {
   background-color: rgba(0, 0, 0, 0.5);
@@ -358,7 +370,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 
 #app {
   max-width: 1280px;
@@ -386,8 +397,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -399,5 +408,16 @@ button:focus-visible {
   button {
     background-color: #eacbcb;
   }
+}
 
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
 
+  a:hover {
+    color: #2b2e66;
+  }
+}
