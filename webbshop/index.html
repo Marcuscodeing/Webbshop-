@@ -5,7 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css">
   </head>
+
   <body>
     <nav>
       <div class="nav-link">
@@ -43,6 +49,44 @@
     </section>
   </div>
     <div id="app">
+    <nav>
+      <div class="nav-link">
+      <ul >
+        
+        <img src="/assets/img/logo.png" alt="logo" id="logo" />
+        <li id="left-item"><a href="#">Dam</a></li>
+        <li id="left-item"><a href="#">Herr</a></li>
+        <li id="left-item"><a href="#">Barn</a></li>
+        <li id="list-item"><a href="#">Varukorg</a></li>
+        <li id="list-item"><a href="#">Kontakt</a></li>
+        <li id="list-item"><a href="#">Hem</a></li>
+      
+      </div>
+      <div class="search-container">
+        <input type="search" placeholder="Sök" id="search" />
+      </div>
+      </ul>
+    </nav>
+    <div>
+    <section id="slider-container">
+      <div id="slider">
+        <div class="slide">
+          <img src="/assets/img/bg1.webp" alt="Slide 1" />
+        </div>
+        <div class="slide"><img src="/assets/img/bg2.jpg" alt="Slide 2" /></div>
+        <div class="slide">
+          <img src="/assets/img/bg3.jpg" alt="Slide 3" />
+        </div>
+      </div>
+      <div class="slider-buttons">
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sidan med video och bild börjar här-->
+    
       <section id="section1">
         <video class="video1" src="video/model.mp4" autoplay muted loop></video>
         <img
@@ -51,7 +95,253 @@
           alt="Bild på modellen"
         />
       </section>
+    <div id="app">
+      <section class="loggin-section">
+        <div>
+          <img class="loggin-img" src="Img/Loggin.jpg" alt="Happy customers" />
+        </div>
+       <div class="loggin-items">
+        <h1>Skapa konto</h1>
+        <p>
+          Som medlem får du förmåner och personliga erbjudanden <br />
+          Skapa ett konto och se för dig själv! <br />
+        </p>
+        <button>Bli medlem</button>
+        <form id="loggin-input">
+          <input type="text" id="loggin" name="loggin" placeholder="Epost" />
+          <br />
+          <button>Logga in</button>
+        </form>
+        <p>Glömt lösenord?</p>
+      </section>
+
+
+      <h1 class="loggin-h1">Förmåner som medlem</h1>
+
+      <section class="loggin-formoner">
+
+        <div>
+          <h3>Erbjudanden</h3>
+          <p>Få tillgång till specialpriser och kampanjer som endast 
+            är tillgängliga för medlemmar. Detta inkluderar allt från 
+            säsongsrabatter till personliga erbjudanden. 
+            Som medlem är du alltid först med att få de bästa priserna.</p>
+      </div>
+
+      <div>
+        <h3>Bonuspoäng</h3>
+        <p>Samla poäng som kan användas för framtida köp eller för att  
+          få gratisprodukter. Ju mer du handlar, desto mer tjänar du på 
+          dina köp. Dina poäng håller dig alltid nära nästa belöning!</p>
     </div>
+
+
+<!-- Nyheter börjar här -->
+
+      <h1 class="nyheter-h1">Nyheter</h1>
+      <div id="product-container"></div>
+    </div>
+
+<!-- Nyheter slutar här -->
+
+<!-- Brands börjar här -->
+
+<div id="brand-section">
+  <h2 class="h2-brands">Utvalda kollektioner</h2>
+</div>
+
+<!-- Brands slutar här -->
+
+
+<!-- Logga in börjar här -->
+      <section class="loggin-section">
+        <div>
+          <img class="loggin-img" src="Img/Loggin.jpg" alt="Happy customers" />
+        </div>
+       <div class="loggin-items">
+        <h1>Skapa konto</h1>
+        <p>
+          Som medlem får du förmåner och personliga erbjudanden <br />
+          Skapa ett konto och se för dig själv! <br />
+        </p>
+        <button>Bli medlem</button>
+        <form id="loggin-input">
+          <input type="text" id="loggin" name="loggin" placeholder="Epost" />
+          <br />
+          <button>Logga in</button>
+        </form>
+        <p>Glömt lösenord?</p>
+      </section>
+
+
+      <h1 class="loggin-h1">Förmåner som medlem</h1>
+
+      <section class="loggin-formoner">
+
+        <div>
+          <h3>Erbjudanden</h3>
+          <p>Få tillgång till specialpriser och kampanjer som endast 
+            är tillgängliga för medlemmar. Detta inkluderar allt från 
+            säsongsrabatter till personliga erbjudanden. 
+            Som medlem är du alltid först med att få de bästa priserna.</p>
+      </div>
+
+      <div>
+        <h3>Bonuspoäng</h3>
+        <p>Samla poäng som kan användas för framtida köp eller för att  
+          få gratisprodukter. Ju mer du handlar, desto mer tjänar du på 
+          dina köp. Dina poäng håller dig alltid nära nästa belöning!</p>
+    </div>
+
+    <div>
+      <h3>Nyheter och rea</h3>
+      <p>Som medlem får du möjlighet att handla nya kollektioner och reor
+        innan de släpps till allmänheten. Missa aldrig chansen att säkra dina 
+        favoriter först. Du får exklusiv tillgång direkt i din inkorg.</p>
+  </div>
+
+  <div>
+    <h3>Personlig anpassning</h3>
+    <p>Få skräddarsydda produktrekommendationer och erbjudanden baserade på 
+      dina intressen och tidigare köp. Vi hjälper dig att hitta det du älskar 
+      utan att du behöver leta.</p>
+</div>
+
+      </section>
+    
+<section class="trustpilot">
+ 
+ 
+  <img src="Img/Trustpilot 3.webp" alt="">
+</section>
+
+    </div>
+    <div id="app">
+    <footer>
+      <div id="app">
+        <hr />
+        <section class="sektion1">
+          <form class="form">
+
+    <!-- Logga in slutar här -->
+    
+    <!-- Footer börjar här -->
+    
+    <footer>
+     
+        <hr />
+        <section class="footer-section1">
+          <form class="footer-form">
+            <h2>Håll dig uppdaterad!</h2>
+            <h3>Prenumerera på vårt nyhetsbrev</h3>
+            <input type="text" placeholder="Email" />
+            <input type="checkbox" id="man" name="man" />
+            <label for="man">Man</label>
+            <input type="checkbox" id="kvinna" name="kvinna" />
+            <label for="kvinna">Kvinna</label>
+            <button>Prenumerera</button>
+          </form>
+        </section>
+
+        <h4>Handla tryggt, säkert och smidigt</h4>
+        <h4 class="ikon-h4">Handla tryggt, säkert och smidigt</h4>
+        <section class="ikon-container">
+          <img src="ikons/ikon1.png" alt="Swich" />
+          <img src="ikons/Ikon2.png" alt="" />
+          <img src="ikons/ikon3.png" alt="" />
+          <img src="ikons/Ikon4.webp" alt="" />
+        </section>
+
+        <section class="footer-items">
+          <div>
+            <h3>Nyheter</h3>
+            <ul>
+              <li>Vinterjackor</li>
+              <li>Skor</li>
+              <li>Hoodies</li>
+              <li>T-shirt</li>
+              <li>Klänningar</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Populära kategorier herr</h3>
+            <h3> Kategori herr</h3>
+            <ul>
+              <li>Vinterjackor</li>
+              <li>T-shirt</li>
+              <li>Kängor</li>
+              <li>Hoodies</li>
+              <li>Skjortor</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Populära kategorier dam</h3>
+            <h3>Kategori dam</h3>
+            <ul>
+              <li>Vinterjackor</li>
+              <li>Skor</li>
+              <li>Kläningar</li>
+              <li>Underställ</li>
+              <li>Underkläder</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Populära brnads</h3>
+            <ul>
+              <li>Filippa K</li>
+              <li>Tommy Hilfiger</li>
+              <li>Ganni</li>
+              <li>Gant</li>
+              <li>Marlene Birger</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Kundservice</h3>
+            <ul>
+              <li>FAQ</li>
+              <li>Kontakta oss</li>
+              <li>Frakt och Leverans</li>
+              <li>Cookies</li>
+              <li>villkor</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Om oss</h3>
+            <ul>
+              <li>Historia</li>
+              <li>Integritetspolicy</li>
+              <li>Miljö och Etik</li>
+              <li>Lediga Tjänster</li>
+              <li>Butiker</li>
+            </ul>
+          </div>
+        </section>
+
+        <h3>Se mer på vår social media</h3>
+        <h3 class="footer-h3">Se mer på vår social media</h3>
+
+        <section class="social-media">
+          <p><i class="fa-brands fa-facebook-f"></i></p>
+          <p><i class="fa-brands fa-instagram"></i></p>
+          <p><i class="fa-brands fa-linkedin"></i></p>
+        </section>
+      </div>
+      <section class="last-item">
+        <h1>Shoppify</h1>
+        <p><i class="fa-regular fa-copyright"></i> 2025 Shopify.com</p>
+      </section>
+    </footer>
+    <div id="app">
+      <h1>Nyheter</h1>
+      <div id="product-container"></div>
+    </div>
+    
+    <h2>Populära produkter för kvinnor</h2>
+    <div id="products-container" class="products-container"></div>
+    <h2>Populära produkter för herr</h2>
+    <div id="products-container2" class="products-container"></div>
+
+    <!-- Footer slutar här -->
     <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/slider.ts"></script>
   </body>
