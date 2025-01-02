@@ -1,5 +1,6 @@
 import './style.css'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -41,3 +42,5 @@ document.body.appendChild(headline);
 document.body.appendChild(container);
 container.className = "brand-container"
 >>>>>>> feature-brands
+=======
+>>>>>>> feature-footer
