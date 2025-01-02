@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +17,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -371,9 +377,10 @@ li {
   margin-top: 100px;
 }
 
-.loggin-formoner {
+/* .loggin-formoner {
 /* Här slutar video och bild sektionen, sida2 */
-/* Här börjar nyheter, sida3 */
+/* Här börjar nyheter, sida3 */ 
+
 
 .nyheter-h1 {
   margin-top: 50px;
@@ -603,6 +610,7 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
 h4 {
   margin-top: 50px;
 }
@@ -685,9 +693,9 @@ button:focus-visible {
     color: #2b2e66;
   }
 
-  max-width: 1200px;
+  /* max-width: 1200px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 20px; */
 }
 
 .h2-brands {
