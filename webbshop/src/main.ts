@@ -85,12 +85,7 @@ const brandPictures = [
   
 ];
 
-
 const container = document.createElement("div")
-const headline = document.createElement ("h2")
-headline.innerHTML = "Utvalda kollektioner"
-headline.className = "h2-brands"
-
 const brandSection = document.getElementById("brand-section");
 
 if (container) {
