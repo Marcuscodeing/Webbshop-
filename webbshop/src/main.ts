@@ -1,8 +1,5 @@
 import './style.css'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 
 const brandPictures = [
