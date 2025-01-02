@@ -36,7 +36,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display: grid;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -106,3 +106,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.products-container {
+  display: block;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+  gap: 10px;
+}
+
+.products-container img {
+  width: 300px;
+  height: 400px;
+}
+
+
