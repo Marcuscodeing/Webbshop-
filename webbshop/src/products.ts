@@ -60,7 +60,7 @@ window.onload = () => {
             let cart = JSON.parse(localStorage.getItem("cart") || "[]");
             cart.push(cartProduct);
             localStorage.setItem("selectedProduct", JSON.stringify(product));
-            
+           
           });
 
     } else {

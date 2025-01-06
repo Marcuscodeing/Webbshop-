@@ -209,25 +209,3 @@ container.className = "brand-container"
 
 
 // Här slutar Brands 
-
-// Här börjar kassa sidan 
-
-const checkOutPage = document.getElementById("checkout-container");
-const completeOrder = document.getElementById("complete-order");
-
-const cart = JSON.parse(localStorage.getItem ("cart") || "[]" );
-
-if (cart.length === 0) {
-  checkOutPage?.innerHTML = "Din varukorg är tom.";
-
-} else {
-  let total = 0;
-  cart.forEach (product => {
-
-    const checkOutProductsDiv = document.createElement ("div");
-    checkOutProductsDiv.className = "product-in-checkout"; 
-
-    
-
-  }) 
-}
