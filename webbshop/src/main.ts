@@ -105,6 +105,14 @@ fetch("https://fakestoreapi.com/products/category/women's clothing")
       price.textContent = `Price: $${product.price}`;
       productDiv.appendChild(price);
 
+      productDiv.addEventListener("click", () => {
+
+        console.log("Selected Product:", product);
+
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        window.location.href = "product.html"; //skickar mig till product.html
+      });
+
       productsContainer.appendChild(productDiv);
     })
   } else {
@@ -139,6 +147,14 @@ fetch("https://fakestoreapi.com/products/category/men's clothing")
       const price = document.createElement("p");
       price.textContent = `Price: $${product.price}`;
       productDiv.appendChild(price);
+
+      productDiv.addEventListener("click", () => {
+
+        console.log("Selected Product:", product);
+
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        window.location.href = "product.html"; //skickar mig till product.html
+      });
 
       productsContainer2.appendChild(productDiv);
     })
