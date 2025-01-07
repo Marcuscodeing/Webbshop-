@@ -10,9 +10,7 @@ window.onload = () => {
     
     cartItems.forEach((cartItem: any) => {
 
-        const product = cartItem.product;
-        const size = cartItem.size;
-        
+
 
         const productDiv = document.createElement("div");
         productDiv.classList.add("cart-item");
@@ -35,13 +33,24 @@ window.onload = () => {
         productDiv?.appendChild(deleteBtn);
 
         deleteBtn?.addEventListener("click", () => {
-            //removeItem?
+            //knapp för att ta bort produkt, men hur öka/minska produkter?
         })
 
         cartContainer?.appendChild(productDiv);
 
         
     });
+
+    if (cartItems.length > 0) { //Om det finns något i varukorgen så visas en knapp för att gå vidare till kassan
+
+        const checkoutButton = document.createElement("button");
+        checkoutButton.innerHTML = "Gå vidare till kassan";
+        checkoutButton.addEventListener("click", () => {
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            window.location.href = "kassa.html"; //Gå vidare till kassan
+        })
+        cartContainer?.appendChild(checkoutButton);
+    }
 
     
 
