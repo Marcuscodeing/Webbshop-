@@ -78,7 +78,6 @@ clothProducts ();
 // Här börjar Produkter för Dam
 
 
-
 fetch("https://fakestoreapi.com/products/category/women's clothing")
 .then((response) => response.json())
 .then((products) => {
@@ -165,13 +164,7 @@ fetch("https://fakestoreapi.com/products/category/men's clothing")
 
 
 // Här slutar Nyhets sidan  
-
-
-
-
-
 // Här börjar börjar Brands 
-
 
 const brandPictures = [
   "./Img/Brand 4.png",  
@@ -205,7 +198,5 @@ for (let i = 0; i < brandPictures.length; i++) {
 brandSection?.appendChild(container);
 container.className = "brand-container"
 };
-
-
 
 // Här slutar Brands 
