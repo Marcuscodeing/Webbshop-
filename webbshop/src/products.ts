@@ -1,7 +1,7 @@
 import './style.css'
 
 window.onload = () => {
-    const aDiv = document.getElementById("app");
+    const aDiv = document.getElementById("apps");
     const storedProduct = localStorage.getItem("selectedProduct");
     console.log("Stored Product from localStorage: ", storedProduct);
 
@@ -15,6 +15,7 @@ window.onload = () => {
         img.src = product.image;
         img.alt = product.title;
         aDiv?.appendChild(img);
+        img.className = "productpageimg"
   
         const title = document.createElement("h3");
         title.innerHTML = product.title;
@@ -23,6 +24,7 @@ window.onload = () => {
         const description = document.createElement("p");
         description.innerHTML = product.description;
         aDiv?.appendChild(description);
+        description.className = "productpage-description"
   
         const price = document.createElement("p");
         price.textContent = `Price: $${product.price}`;

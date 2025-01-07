@@ -47,8 +47,6 @@ checkOutPage?.appendChild(kassaTotalPrice);
 
 const orderButton = document.createElement("button");
 orderButton.innerHTML = "Slutför beställning";
-
-
 checkOutPage?.appendChild(orderButton);
 }
 

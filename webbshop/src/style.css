@@ -344,6 +344,39 @@ li {
 }
 
 /* Här slutar logga in / skapa konto */
+
+/* Här börjar produktsidan */
+
+#apps {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 10px;
+}
+
+.productpageimg {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#apps p {
+  width: 500px;
+  max-height: 100px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* Här börjar Footer */
 
 .footer-section1 {
