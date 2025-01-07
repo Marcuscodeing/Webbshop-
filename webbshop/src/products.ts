@@ -59,7 +59,9 @@ window.onload = () => {
 
             let cart = JSON.parse(localStorage.getItem("cart") || "[]");
             cart.push(cartProduct);
+            localStorage.setItem("cart", JSON.stringify(cart));
             localStorage.setItem("selectedProduct", JSON.stringify(product));
+            window.location.href = "cart.html";   
             
           });
 

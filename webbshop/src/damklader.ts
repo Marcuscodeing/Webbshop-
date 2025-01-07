@@ -39,6 +39,7 @@ fetch("https://fakestoreapi.com/products/category/women's clothing")
         console.log("Selected Product:", product);
 
         localStorage.setItem("selectedProduct", JSON.stringify(product));
+        
         window.location.href = "product.html"; //skickar mig till product.html
       });
     })
