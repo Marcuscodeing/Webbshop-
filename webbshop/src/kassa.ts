@@ -38,7 +38,7 @@ if (cart.length === 0) {
 
     checkOutPage?.appendChild(checkOutProductsDiv);
 
-    total += product.price;
+    total += product.price || 0 ;
   }); 
 
 const kassaTotalPrice = document.createElement("div");
