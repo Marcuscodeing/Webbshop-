@@ -1,14 +1,22 @@
 import './style.css'
+interface Product {
+    title: string;
+    price: number;
+    image: string;
+}
 
+interface CartItem {
+    product: Product;
+}
 
 window.onload = () => {
     const cartContainer = document.getElementById("app");
 
-    const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cartItems: CartItem []  = JSON.parse(localStorage.getItem("cart") || "[]");
     console.log("Stored Product from localStorage: ", cartItems);
 
     
-    cartItems.forEach((cartItem: any) => {
+    cartItems.forEach((cartItem) => {
 
 
 
@@ -30,12 +38,16 @@ window.onload = () => {
         productDiv?.appendChild(price);
 
         const deleteBtn = document.createElement("button");
-        productDiv?.appendChild(deleteBtn);
-
+        deleteBtn.innerHTML = "Ta bort";
         deleteBtn?.addEventListener("click", () => {
             //knapp för att ta bort produkt, men hur öka/minska produkter?
-        })
+        
+            const uppdateradLs = cartItems.filter(item => item !== cartItem);
+            localStorage.setItem ("cart", JSON.stringify(uppdateradLs));
+            window.location.reload();         
+        });
 
+        productDiv?.appendChild(deleteBtn);
         cartContainer?.appendChild(productDiv);
 
         
@@ -51,9 +63,4 @@ window.onload = () => {
         })
         cartContainer?.appendChild(checkoutButton);
     }
-
-    
-
-
-
 };
