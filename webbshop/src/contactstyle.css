@@ -7,8 +7,8 @@ contactstyle.css
   }
   
   body{
-    background-color: rgb(189, 177, 228);
-    color: white;
+    background-color: white;
+    color: black;
   }
   #nav{
       display: flex;
@@ -42,8 +42,6 @@ contactstyle.css
     #img-logo{
   width: 80px;
   height:80px;
-  border-radius: 50%;
-  border: 2px solid white;
   margin-left: 8px;
   margin-top: 15px;
    }
@@ -52,7 +50,7 @@ contactstyle.css
       grid-template-columns: 1fr 1fr;
       gap: 5px;
       margin-top: 20px;
-      background-color: rgb(189, 177, 228);
+      background-color: white;
     }
    #form-sec{
     color:black;
@@ -80,10 +78,14 @@ contactstyle.css
     
   }
   
-  
+  #b-m{
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+  }
   #sub-btn{
     color: black;
-    background-color:rgb(189, 177, 228);
+    background-color:palevioletred;
     border-radius: 30px;
     cursor: pointer;
     padding: 10px 20px; border: 2px solid black;
@@ -92,7 +94,7 @@ contactstyle.css
   
   }
   #sub-btn:hover{
-    background-color: blueviolet;
+    background-color: pink;
   }
   
   #fot{
