@@ -290,6 +290,20 @@ li {
   max-width: 200px;
 }
 
+.summering {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 12px;
+}
+
+.summering p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
 /* Här börjar logga in / skapa konto */
 
 .loggin-h1 {

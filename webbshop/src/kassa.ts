@@ -26,6 +26,10 @@ let totalExTax: number = 0;
 let totalWithTax: number = 0;
 let totalWithBoth: number = 0;
 
+
+const productskassa = document.createElement("div");
+productskassa.className = "products"; 
+
 cartItems.forEach((cartItem) => {
 
   const kassaDiv = document.createElement ("div");
@@ -52,32 +56,34 @@ cartItems.forEach((cartItem) => {
   checkout?.appendChild(kassaDiv);
 });
 
+checkout?.appendChild(productskassa);
 
 // Lägg till Summering.  
 
-totalWithBoth = totalExTax + totalWithTax;
 
 const summery = document.createElement("div");
 summery.className = "summering";
 
+totalWithBoth = totalExTax + totalWithTax;
+
 const noTax = document.createElement("p");
-noTax.innerHTML = `Totalt pris (utan moms): ${totalExTax.toFixed(2)}`;
+noTax.innerHTML = `Totalt pris (utan moms): <span> ${totalExTax.toFixed(2)}</span>`; 
 summery.appendChild(noTax);
 
 const hr1 = document.createElement("hr");
 summery.appendChild(hr1) 
 
 const tax = document.createElement("p");
-tax.innerHTML = `Moms (25%): ${totalWithTax.toFixed(2)}`;
+tax.innerHTML = `Moms (25%): <span> ${totalWithTax.toFixed(2)}</span>`;
 summery.appendChild(tax)
 
 const hr2 = document.createElement("hr");
 summery.appendChild(hr2) 
 
 const totalSum = document.createElement ("p");
-totalSum.innerHTML = `Totalt pris (inkl moms) ${totalWithBoth.toFixed(2)}`;
+totalSum.innerHTML = `Totalt pris (inkl moms) <span> ${totalWithBoth.toFixed(2)} </span>`;
 summery.appendChild(totalSum);
 
 checkout?.appendChild(summery);
 
-}
+};
