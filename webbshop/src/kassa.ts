@@ -152,7 +152,7 @@ summery.appendChild(totalSum);
 
 };
 
-
+updateSummery();
 
 const totalPayment = document.getElementById("totalPayment"); 
 const totalPaymentText = document.createElement("p");
@@ -161,7 +161,6 @@ totalPaymentText.innerHTML = `Totaltbelopp <span> ${totalWithBoth.toFixed(2)} </
 totalPayment?.appendChild(totalPaymentText);
 
 };
-
 
 
 const finalButt = document.getElementById("complete-order");
