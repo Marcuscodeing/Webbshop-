@@ -284,6 +284,10 @@ li {
   width: 100%;
 }
 
+.kassa-navigering a {
+  color: #1a1a1a;
+}
+
 #checkout-container {
   display: flex;
   justify-content: center;
