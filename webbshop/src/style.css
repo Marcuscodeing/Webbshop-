@@ -921,5 +921,36 @@ margin-bottom: 5px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 70px;
+  color: black;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+#dam-header:hover{
+  -webkit-text-stroke: 2px black;
+  color:transparent;
+}
+/* ---------------------herr-kläder----------- */
+
+#products2-herr{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  gap: 10px;
+}
+#herr-header{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 70px;
+  color: black;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+#herr-header:hover{
+  -webkit-text-stroke:2px black;
+  color: transparent;
 }
