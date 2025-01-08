@@ -11,6 +11,8 @@ interface CartItem {
     product: Product;
 }
 
+// Hämta våra kära produkter 
+
 window.onload = () => {
 
 const checkout = document.getElementById("checkout-container");
@@ -20,6 +22,8 @@ if (cartItems.length === 0 ) {
   checkout!.innerHTML = "Din varukorg är tom";
 return;
 }
+
+// Variabler för att räkna ut priserna
 
 const momssats: number = 0.25;
 let totalExTax: number = 0;
@@ -85,5 +89,19 @@ totalSum.innerHTML = `Totalt pris (inkl moms) <span> ${totalWithBoth.toFixed(2)}
 summery.appendChild(totalSum);
 
 checkout?.appendChild(summery);
+
+
+
+const totalPayment = document.getElementById("totalPayment"); 
+const totalPaymentText = document.createElement("p");
+totalPaymentText.className = "totalPayment-text";
+totalPaymentText.innerHTML = `Totaltbelopp <span> ${totalWithBoth.toFixed(2)} </span>`;
+totalPayment?.appendChild(totalPaymentText);
+
+
+const finalButt = document.getElementById("complete-order");
+finalButt?.addEventListener ("click", () => {
+  window.location.href = "sista-sidan.html";
+});
 
 };
