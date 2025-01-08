@@ -7,6 +7,8 @@ interface Product {
 
 interface CartItem {
     product: Product;
+    size: string;
+    quantity: number;
 }
 
 window.onload = () => {
@@ -16,8 +18,12 @@ window.onload = () => {
     console.log("Stored Product from localStorage: ", cartItems);
 
     
-    cartItems.forEach((cartItem) => {
+    cartItems.forEach((cartItem, index) => {
 
+
+        //const product = cartItem.product;
+        const size = cartItem.size;
+        let quantity = cartItem.quantity;
 
 
         const productDiv = document.createElement("div");
@@ -36,6 +42,43 @@ window.onload = () => {
         const price = document.createElement("p");
         price.textContent = `Price: $${cartItem.product.price}`;
         productDiv?.appendChild(price);
+
+        //const size = document.createElement("p");
+        //size.textContent = `Size: ${size}`;
+        //productDiv.appendChild(size); //Storlek
+
+        const sizeElement = document.createElement("p");
+        sizeElement.textContent = `Size: ${size}`;
+        productDiv.appendChild(sizeElement);
+
+
+        const quantityAntal = document.createElement("p");
+        quantityAntal.textContent = `Quantity: ${quantity}`;
+        productDiv.appendChild(quantityAntal); //Antal
+
+        const increaseBtn = document.createElement("button");
+        increaseBtn.innerHTML = "+";
+        increaseBtn.addEventListener("click", () => {
+            quantity += 1;
+            cartItems[index].quantity = quantity;
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            quantityAntal.textContent = `Quantity: ${quantity}`;
+            price.textContent = `Price: $${(cartItem.product.price * quantity).toFixed(2)}`;
+        });
+
+        productDiv.appendChild(increaseBtn);
+
+        const decreaseBtn = document.createElement("button");
+        decreaseBtn.innerHTML = "-";
+        decreaseBtn.addEventListener("click", () => {
+            quantity -= 1;
+            cartItems[index].quantity = quantity;
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            quantityAntal.textContent = `Quantity: ${quantity}`;
+            price.textContent = `Price: $${(cartItem.product.price * quantity).toFixed(2)}`;
+        });
+
+        productDiv.appendChild(decreaseBtn);
 
         const deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = "Ta bort";

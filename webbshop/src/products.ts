@@ -56,7 +56,8 @@ window.onload = () => {
 
             const cartProduct = { // Fastnat här, hur spara storlek och hämta från localStorage? Skapa en funktion istället? Interface?
                 product: product,
-                size: selectedSize
+                size: selectedSize,
+                quantity: 1,
             };
 
             let cart = JSON.parse(localStorage.getItem("cart") || "[]");
