@@ -7,9 +7,41 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Kassa</h1>
+    <nav class="kassa-navigering">
+      <ul>
+        <li>Kassa</li>
+        <li><a href="cart.html">Tillbaka till shoppen</a></li>
+      </ul>
+    </nav>
+
     <div id="checkout-container"></div>
-    <button id="complete-order">Betala köp</button>
+
+    <h3 class="kassaheader">Fyll i dina uppgifter automatiskt</h3>
+
+    <div class="section2">
+      <button>
+        <p>Fortsätt med <img src="ikons/ikon3.png" alt="" /></p>
+      </button>
+    </div>
+
+    <h4 class="kassaheader2">Eller fortsätt nedan</h4>
+
+    <div class="kassaform">
+      <h2>Dela dina uppgifter</h2>
+      <form>
+        <input type="text" placeholder="Mejladress" />
+        <input type="text" placeholder="Postnummer" />
+      </form>
+      <button class="kassabtn">Fortsätt</button>
+      <hr />
+    </div>
+
+    <div id="totalPayment"></div>
+
+    <div class="section3">
+      <button id="complete-order">Betala köp</button>
+    </div>
+
     <h4 class="ikon-h4">Handla tryggt, säkert och smidigt</h4>
     <section class="ikon-container">
       <img src="ikons/ikon1.png" alt="Swich" />
@@ -17,6 +49,14 @@
       <img src="ikons/ikon3.png" alt="" />
       <img src="ikons/Ikon4.webp" alt="" />
     </section>
+
+    <footer>
+      <section class="last-item">
+        <h1>Shoppify</h1>
+        <p><i class="fa-regular fa-copyright"></i> 2025 Shopify.com</p>
+      </section>
+    </footer>
+
     <script type="module" src="/src/kassa.ts"></script>
   </body>
 </html>
