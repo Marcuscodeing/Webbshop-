@@ -64,9 +64,15 @@ const noTax = document.createElement("p");
 noTax.innerHTML = `Totalt pris (utan moms): ${totalExTax.toFixed(2)}`;
 summery.appendChild(noTax);
 
+const hr1 = document.createElement("hr");
+summery.appendChild(hr1) 
+
 const tax = document.createElement("p");
 tax.innerHTML = `Moms (25%): ${totalWithTax.toFixed(2)}`;
 summery.appendChild(tax)
+
+const hr2 = document.createElement("hr");
+summery.appendChild(hr2) 
 
 const totalSum = document.createElement ("p");
 totalSum.innerHTML = `Totalt pris (inkl moms) ${totalWithBoth.toFixed(2)}`;
