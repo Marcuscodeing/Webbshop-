@@ -61,6 +61,14 @@ filteredProducts.forEach ((product) => {
 
   const button = document.createElement("button");
   button.textContent = "Add to cart";
+
+  button.addEventListener("click", () => {
+
+    console.log("Selected Product:", product);
+
+    localStorage.setItem("selectedProduct", JSON.stringify(product));
+    window.location.href = "product.html"; //skickar mig till product.html
+  });
   
   productArea.appendChild(img);
   productArea.appendChild(title);
