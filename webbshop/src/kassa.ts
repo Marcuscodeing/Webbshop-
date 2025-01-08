@@ -21,15 +21,20 @@ if (cartItems.length === 0 ) {
 return;
 }
 
-let totalPrice = 0;
+const momssats: number = 0.25;
+let totalExTax: number = 0;
+let totalWithTax: number = 0;
+let totalWithBoth: number = 0;
 
 cartItems.forEach((cartItem) => {
 
   const kassaDiv = document.createElement ("div");
+  kassaDiv.className = "kassasida"
 
   const kassaImg = document.createElement("img");
   kassaImg.src = cartItem.product.image;
   kassaImg.alt = cartItem.product.title;
+  kassaImg.className = "kassaimg"
 
   kassaDiv?.appendChild(kassaImg);
 
@@ -40,10 +45,33 @@ cartItems.forEach((cartItem) => {
   const kassaPrice = document.createElement("p");
   kassaPrice.innerHTML = `Pris: ${cartItem.product.price}`;
 
-  totalPrice += cartItem.product.price;
+  totalExTax += cartItem.product.price;
+  totalWithTax += cartItem.product.price * momssats;
 
+  kassaDiv.appendChild(kassaPrice);
   checkout?.appendChild(kassaDiv);
 });
 
+
+// Lägg till Summering.  
+
+totalWithBoth = totalExTax + totalWithTax;
+
+const summery = document.createElement("div");
+summery.className = "summering";
+
+const noTax = document.createElement("p");
+noTax.innerHTML = `Totalt pris (utan moms): ${totalExTax.toFixed(2)}`;
+summery.appendChild(noTax);
+
+const tax = document.createElement("p");
+tax.innerHTML = `Moms (25%): ${totalWithTax.toFixed(2)}`;
+summery.appendChild(tax)
+
+const totalSum = document.createElement ("p");
+totalSum.innerHTML = `Totalt pris (inkl moms) ${totalWithBoth.toFixed(2)}`;
+summery.appendChild(totalSum);
+
+checkout?.appendChild(summery);
 
 }

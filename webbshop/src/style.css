@@ -266,6 +266,30 @@ li {
 
 /* Här slutar brands, sida4 */
 
+/* Här börjar kassasidan */
+
+#checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.kassasida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.kassaimg {
+  max-width: 200px;
+}
+
 /* Här börjar logga in / skapa konto */
 
 .loggin-h1 {
