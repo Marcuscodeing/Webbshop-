@@ -38,20 +38,17 @@ window.onload = () => {
         title.innerHTML = cartItem.product.title;
         productDiv?.appendChild(title);
 
-  
+        //Pris
         const price = document.createElement("p");
         price.textContent = `Price: $${cartItem.product.price}`;
         productDiv?.appendChild(price);
 
-        //const size = document.createElement("p");
-        //size.textContent = `Size: ${size}`;
-        //productDiv.appendChild(size); //Storlek
-
+        //Storlek
         const sizeElement = document.createElement("p");
         sizeElement.textContent = `Size: ${size}`;
         productDiv.appendChild(sizeElement);
 
-
+        //Antal
         const quantityAntal = document.createElement("p");
         quantityAntal.textContent = `Quantity: ${quantity}`;
         productDiv.appendChild(quantityAntal); //Antal
