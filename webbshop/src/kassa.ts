@@ -46,16 +46,6 @@ cartItems.forEach((cartItem, index ) => {
   const kassaDiv = document.createElement ("div");
   kassaDiv.className = "kassasida"
 
-  const sizeElement = document.createElement("p");
-  sizeElement.textContent = `Size: ${size}`;
-  kassaDiv.appendChild(sizeElement);
-
-
-  const quantityAntal = document.createElement("p");
-  quantityAntal.textContent = `Quantity: ${quantity}`;
-  kassaDiv.appendChild(quantityAntal);
-
-
   const kassaImg = document.createElement("img");
   kassaImg.src = cartItem.product.image;
   kassaImg.alt = cartItem.product.title;
@@ -67,9 +57,16 @@ cartItems.forEach((cartItem, index ) => {
   kassaDiv?.appendChild(kassaTitle);
 
   const kassaPrice = document.createElement("p");
-  kassaPrice.innerHTML = `Pris: ${cartItem.product.price}`;
+  kassaPrice.innerHTML = `Pris: $${cartItem.product.price}`;
   
-  
+  const sizeElement = document.createElement("p");
+  sizeElement.textContent = `Size: ${size}`;
+  kassaDiv.appendChild(sizeElement);
+
+
+  const quantityAntal = document.createElement("p");
+  quantityAntal.textContent = `Quantity: ${quantity}`;
+  kassaDiv.appendChild(quantityAntal);
 
   kassaDiv.appendChild(kassaPrice);
   checkout?.appendChild(kassaDiv);
@@ -100,10 +97,27 @@ cartItems.forEach((cartItem, index ) => {
   
       updateSummery();
   
+      kassaDiv.appendChild(decreaseBtn);
+
+        
+      });
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.innerHTML = "Ta bort";
+      deleteBtn.id = "cart-del";
+      deleteBtn?.addEventListener("click", () => {
+          //knapp för att ta bort produkt, men hur öka/minska produkter?
+      
+          const uppdateradLs = cartItems.filter(item => item !== cartItem);
+          localStorage.setItem ("cart", JSON.stringify(uppdateradLs));
+          window.location.reload();     
+
+
     });
 
+    
   kassaDiv.appendChild(decreaseBtn);
-
+  kassaDiv.appendChild(deleteBtn);
 });
 
 checkout?.appendChild(productskassa);
@@ -133,21 +147,21 @@ summery.innerHTML = "";
 
 
 const noTax = document.createElement("p");
-noTax.innerHTML = `Totalt pris (utan moms): <span> ${totalExTax.toFixed(2)}</span>`; 
+noTax.innerHTML = `Totalt pris (utan moms): <span> $${totalExTax.toFixed(2)}</span>`; 
 summery.appendChild(noTax);
 
 const hr1 = document.createElement("hr");
 summery.appendChild(hr1) 
 
 const tax = document.createElement("p");
-tax.innerHTML = `Moms (25%): <span> ${totalWithTax.toFixed(2)}</span>`;
+tax.innerHTML = `Moms (25%): <span> $${totalWithTax.toFixed(2)}</span>`;
 summery.appendChild(tax)
 
 const hr2 = document.createElement("hr");
 summery.appendChild(hr2) 
 
 const totalSum = document.createElement ("p");
-totalSum.innerHTML = `Totalt pris (inkl moms) <span> ${totalWithBoth.toFixed(2)} </span>`;
+totalSum.innerHTML = `Totalt pris (inkl moms) <span> $${totalWithBoth.toFixed(2)} </span>`;
 summery.appendChild(totalSum);
 
 };
@@ -157,7 +171,7 @@ updateSummery();
 const totalPayment = document.getElementById("totalPayment"); 
 const totalPaymentText = document.createElement("p");
 totalPaymentText.className = "totalPayment-text";
-totalPaymentText.innerHTML = `Totaltbelopp <span> ${totalWithBoth.toFixed(2)} </span>`;
+totalPaymentText.innerHTML = `Totaltbelopp <span> $${totalWithBoth.toFixed(2)} </span>`;
 totalPayment?.appendChild(totalPaymentText);
 
 };
