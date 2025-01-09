@@ -121,7 +121,7 @@ li {
 }
 /* -----------------mobile-------- */
 
- /* @media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #myLinks {
       display: none;
   }
@@ -131,7 +131,6 @@ li {
       display: block; 
   }
 }  */
-
 
 .mobile-container {
   max-width: 480px;
@@ -172,10 +171,10 @@ li {
   background-color: #ddd;
   color: black;
 }
-#logo{
-    width: 50px;
-    height:50px;
-    border-radius: 50%;
+#logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 /* Här slutar Första sidan */
@@ -1011,19 +1010,131 @@ label {
   }
 }
 
-@media (max-width: 1024) {
+/* För mobiltelefoner på kassasidan */
+
+@media screen and (max-width: 448px) {
+  .kassa-navigering {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .kassa-navigering ul {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+  }
+
+  .kassa-navigering ul li:first-child {
+    display: none;
+  }
+
   #checkout-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
   }
-  .summering {
+
+  .kassasida {
     width: 90%;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .kasssida {
-    width: 250px;
+
+  .summering {
+    width: 100%;
+    margin-top: 20px;
   }
-  .section2 button {
+
+  .kassaform {
+    min-width: 90%;
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .kassaform form {
+    width: 100%;
+  }
+
+  #totalPayment {
     width: 100%;
   }
 }
 
-/* För mobiltelefoner på kassasidan */
+@media screen and (max-width: 700px) {
+  .kassa-navigering {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #checkout-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .kassasida {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .summering {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .kassaform {
+    min-width: 90%;
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .kassaform form {
+    width: 100%;
+  }
+
+  #totalPayment {
+    width: 100%;
+  }
+}
+
+/* Mediaquaries för varukorg */
+
+@media screen and (max-width: 448px) {
+  .var-contain {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .cart-item {
+    width: 100%;
+    height: auto;
+  }
+
+  #cart-heading {
+    font-size: 28px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
