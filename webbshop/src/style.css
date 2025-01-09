@@ -1127,3 +1127,42 @@ label {
     text-align: center;
   }
 }
+
+/* För landningssidan */
+@media only screen and (max-width: 448px) {
+  #slider-container, #section1 {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 5px;
+    gap: 5px !important;
+    margin: 5px !important;
+    overflow: hidden;
+  }
+
+  #brand-section {
+    display: none;
+  }
+
+  .loggin-section {
+    display: none;
+  }
+
+  .loggin-formoner, .loggin-h1 {
+    display: none;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-items {
+    display: none;
+  }
+}
+
