@@ -32,15 +32,18 @@ window.onload = () => {
         const img = document.createElement("img");
         img.src = cartItem.product.image;
         img.alt = cartItem.product.title;
+        img.id = "cart-img";
         productDiv?.appendChild(img);
   
         const title = document.createElement("h3");
         title.innerHTML = cartItem.product.title;
+        title.id ="cart-title";
         productDiv?.appendChild(title);
 
   
         const price = document.createElement("p");
         price.textContent = `Price: $${cartItem.product.price}`;
+        price.id = "cart-price";
         productDiv?.appendChild(price);
 
         //const size = document.createElement("p");
@@ -49,15 +52,18 @@ window.onload = () => {
 
         const sizeElement = document.createElement("p");
         sizeElement.textContent = `Size: ${size}`;
+        sizeElement.id = "cart-size";
         productDiv.appendChild(sizeElement);
 
 
         const quantityAntal = document.createElement("p");
         quantityAntal.textContent = `Quantity: ${quantity}`;
+        quantityAntal.id = "cart-quantity";
         productDiv.appendChild(quantityAntal); //Antal
 
         const increaseBtn = document.createElement("button");
         increaseBtn.innerHTML = "+";
+        increaseBtn.id = "cart-increase";
         increaseBtn.addEventListener("click", () => {
             quantity += 1;
             cartItems[index].quantity = quantity;
@@ -70,6 +76,7 @@ window.onload = () => {
 
         const decreaseBtn = document.createElement("button");
         decreaseBtn.innerHTML = "-";
+        decreaseBtn.id = "decrease-cart";
         decreaseBtn.addEventListener("click", () => {
             quantity -= 1;
             cartItems[index].quantity = quantity;
@@ -82,6 +89,7 @@ window.onload = () => {
 
         const deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = "Ta bort";
+        deleteBtn.id = "cart-del";
         deleteBtn?.addEventListener("click", () => {
             //knapp för att ta bort produkt, men hur öka/minska produkter?
         
@@ -100,6 +108,7 @@ window.onload = () => {
 
         const checkoutButton = document.createElement("button");
         checkoutButton.innerHTML = "Gå vidare till kassan";
+        checkoutButton.id = "cart-checkout-btn";
         checkoutButton.addEventListener("click", () => {
             localStorage.setItem("cart", JSON.stringify(cartItems));
             window.location.href = "kassa.html"; //Gå vidare till kassan
