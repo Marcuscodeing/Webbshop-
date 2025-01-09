@@ -120,18 +120,7 @@ li {
   height: 100vh;
 }
 /* -----------------mobile-------- */
-
-/* @media screen and (max-width: 768px) {
-  #myLinks {
-      display: none;
-  }
-}
-@media screen and (min-width: 769px) {
-  #myLinks {
-      display: block; 
-  }
-}  */
-
+ 
 .mobile-container {
   max-width: 480px;
   margin: auto;
