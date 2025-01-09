@@ -132,6 +132,38 @@ height: 100vh;
   }
 }  */
 
+/* Default: Show both navbars (desktop and mobile) */
+#desktopNavbar {
+  display: block; /* Show desktop navbar by default */
+}
+
+#mobileNavbar {
+  display: block; /* Show mobile navbar by default */
+}
+
+/* Media Query for Mobile (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Show mobile navbar and hide desktop navbar on small screens (mobile) */
+  #desktopNavbar {
+      display: none; /* Hide desktop navbar on mobile */
+  }
+
+  #mobileNavbar {
+      display: block; /* Show mobile navbar on mobile */
+  }
+}
+
+/* Media Query for Desktop (Min-width: 769px) */
+@media screen and (min-width: 769px) {
+  /* Hide mobile navbar on desktop */
+  #mobileNavbar {
+      display: none; /* Hide mobile navbar on desktop */
+  }
+
+  #desktopNavbar {
+      display: block; /* Show desktop navbar on desktop */
+  }
+}
 
 .mobile-container {
   max-width: 480px;
