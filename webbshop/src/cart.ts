@@ -1,15 +1,6 @@
 import './style.css'
-interface Product {
-    title: string;
-    price: number;
-    image: string;
-}
+import { CartItem } from './types/models';
 
-interface CartItem {
-    product: Product;
-    size: string;
-    quantity: number;
-}
 
 window.onload = () => {
     const cartContainer = document.getElementById("app");

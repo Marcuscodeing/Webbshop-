@@ -1,19 +1,8 @@
 
 import './style.css';
+import { CartItem } from './types/models';
 
-interface Product {
-    title: string;
-    price: number;
-    image: string;
-}
-
-interface CartItem {
-    product: Product;
-    size: string;
-    quantity: number;
-}
-
-// Hämta våra kära produkter 
+// Funktionalitet vid sidladdning och lagring av produkter.  
 
 window.onload = () => {
 
@@ -25,7 +14,7 @@ if (cartItems.length === 0 ) {
 return;
 }
 
-// Variabler för att räkna ut priserna
+// Variabler för att räkna ut priserna med och utan moms 
 
 const momssats: number = 0.25;
 let totalExTax: number = 0;
@@ -33,7 +22,7 @@ let totalWithTax: number = 0;
 let totalWithBoth: number = 0;
 
 
-// Skapa div och loop igenom bild title pris 
+// Skapa Html och loop igenom bild title pris. Produkter i varukorg  
 
 const productskassa = document.createElement("div");
 productskassa.className = "products"; 
@@ -71,6 +60,9 @@ cartItems.forEach((cartItem, index ) => {
   kassaDiv.appendChild(kassaPrice);
   checkout?.appendChild(kassaDiv);
 
+
+  // Kod för knappar som tar bort och lägger till samt uppdaterar LS
+
   const increaseBtn = document.createElement("button");
   increaseBtn.innerHTML = "+";
   increaseBtn.addEventListener("click", () => {
@@ -99,35 +91,37 @@ cartItems.forEach((cartItem, index ) => {
   
       kassaDiv.appendChild(decreaseBtn);
 
-        
       });
+
+      // knapp för att ta bort varan 
 
       const deleteBtn = document.createElement("button");
       deleteBtn.innerHTML = "Ta bort";
       deleteBtn.id = "cart-del";
       deleteBtn?.addEventListener("click", () => {
-          //knapp för att ta bort produkt, men hur öka/minska produkter?
-      
-          const uppdateradLs = cartItems.filter(item => item !== cartItem);
-          localStorage.setItem ("cart", JSON.stringify(uppdateradLs));
-          window.location.reload();     
 
+      
+        const uppdateradLs = cartItems.filter(item => item !== cartItem);
+        localStorage.setItem ("cart", JSON.stringify(uppdateradLs));
+        window.location.reload();     
 
     });
 
-    
   kassaDiv.appendChild(decreaseBtn);
   kassaDiv.appendChild(deleteBtn);
 });
 
 checkout?.appendChild(productskassa);
 
-// Lägg till Summering.  
+// Lägg till Summering och användning av moms variabler
 
 
 const summery = document.createElement("div");
 summery.className = "summering";
 checkout?.appendChild(summery);
+
+// funktion för att uppdatera  och beräkna summering av produkter baserat på varukorgen. 
+// vill visa tre tydliga fält med priser med moms, utan moms och totalt 
 
 const updateSummery = () => {
 
@@ -140,11 +134,11 @@ const updateSummery = () => {
 
   });
 
-
 totalWithBoth = totalExTax + totalWithTax;
 
-summery.innerHTML = "";
+// töm eller rensa tidigare innheåll för att uppdatera me nytt. 
 
+summery.innerHTML = "";
 
 const noTax = document.createElement("p");
 noTax.innerHTML = `Totalt pris (utan moms): <span> $${totalExTax.toFixed(2)}</span>`; 
@@ -168,6 +162,8 @@ summery.appendChild(totalSum);
 
 updateSummery();
 
+// Total belop att betal längst ned på sidan. 
+
 const totalPayment = document.getElementById("totalPayment"); 
 const totalPaymentText = document.createElement("p");
 totalPaymentText.className = "totalPayment-text";
@@ -176,9 +172,10 @@ totalPayment?.appendChild(totalPaymentText);
 
 };
 
+// sista knappen för att genomföra köp! 
 
-const finalButt = document.getElementById("complete-order");
-finalButt?.addEventListener ("click", () => {
+const finalBtn = document.getElementById("complete-order");
+finalBtn?.addEventListener ("click", () => {
   window.location.href = "sista-sidan.html";
 });
 

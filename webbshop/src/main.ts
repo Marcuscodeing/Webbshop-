@@ -1,16 +1,10 @@
 import './style.css'
-
+import { Product } from './types/models';
 
 // Här börjar Nyheter sidan 
 
-interface Product {
-  id: number;
-  title: string 
-  price: number;
-  image: string; 
-  category: string;
-}
 
+// Hämta data från API
 
 async function getCloths (): Promise<Product[]> {
 
@@ -37,12 +31,16 @@ async function clothProducts () {
     return;
   }
 
+  // Visa produkter på sidan. 
+
   const products = await getCloths();
 
   const filteredProducts = products.filter(product => 
     product.category === "men's clothing" || product.category === "women's clothing"
   );
 
+
+// Skapa HTML för varje produkt 
 
 filteredProducts.forEach ((product) => {
   
