@@ -1166,3 +1166,19 @@ label {
   }
 }
 
+/* Damsida, herrsida */
+@media only screen and (max-width: 448px){
+  #dam-header, #herr-header {
+    transform: scale(0.8);
+  }
+  #dam-heading, #herr-heading {
+    font-size: 30px;
+    align-items: center;
+    align-content: center;
+  }
+
+  #products-dam {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
